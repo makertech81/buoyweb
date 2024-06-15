@@ -3,38 +3,27 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import logo from "assets/logo.svg";
+
 
 const menuitems = [
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
+    title: "What We Do",
+    path: "#about",
+  },
+  {
+    title: "How It Works",
+    path: "#how",
+  },
+  {
+    title: "Benefits",
+    path: "#benefits",
   },
   {
     title: "Pricing",
-    path: "/pricing",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Pro Version",
-    badge: true,
-    path: "https://astroship-pro.web3templates.com/",
+    path: "#pricing",
   },
 ];
 ---
@@ -44,9 +33,15 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
           >
+          <Picture
+            src={logo}
+            alt="Floating buoy in water is the logo of company."
+            widths={[50, 100, 150]}
+            sizes="(max-width: 200px) 25vw, 155px"
+            loading="eager"
+            format="avif"
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -85,14 +80,14 @@ const menuitems = [
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
+          <Link href="#" size="md" block>See Plans</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
         <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
+        <Link href="#" size="md">See Plans</Link>
       </div>
     </div>
   </header>

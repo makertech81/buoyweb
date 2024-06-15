@@ -6,16 +6,15 @@ import PricingCard from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
+    name: "Starter",
+    price: "$99",
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "Hand-coded website with up to 5 pages",
+      "5 hours of revisions per month",
+      "Basic SEO setup (meta tags, alt text, etc.)",
+      "24/7 Support",
+      "Hosting and domain included",
     ],
     button: {
       text: "Get Started",
@@ -23,21 +22,15 @@ const pricing = [
     },
   },
   {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
+    name: "Growth",
+    price: "$249",
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "All Starter Features",
+      "Unlimited Rivisions",
+      "CMS and Blog",
+      "Personalized design based on your brand",
+      "Up to 10 custom pages",
     ],
     button: {
       text: "Get Started",
@@ -45,16 +38,31 @@ const pricing = [
     },
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: "Startup",
+    price: "$499",
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
+      "Ecommerce Support",
+      "Unlimited Design Work",
+      "Advanced Integrations",
       "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "Prority Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Enterprise",
+    price: "$999",
+    popular: false,
+    features: [
+      "Ecommerce Support",
+      "Unlimited Design Work",
+      "Advanced Integrations",
+      "Dedicated Account Manager",
+      "Prority Support",
     ],
     button: {
       text: "Contact us",
@@ -64,7 +72,7 @@ const pricing = [
 ];
 ---
 
-<Layout title="Pricing">
+
   <Container>
     <Sectionhead>
       <Fragment slot="title">Pricing</Fragment>
@@ -77,4 +85,4 @@ const pricing = [
       {pricing.map((item) => <PricingCard plan={item} />)}
     </div>
   </Container>
-</Layout>
+
