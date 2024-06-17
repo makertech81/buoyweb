@@ -7,68 +7,53 @@ import PricingCard from "@components/pricing.astro";
 const pricing = [
   {
     name: "Starter",
-    price: "$99",
+    price: "$49",
     popular: false,
     features: [
-      "Hand-coded website with up to 5 pages",
-      "5 hours of revisions per month",
-      "Basic SEO setup (meta tags, alt text, etc.)",
-      "24/7 Support",
-      "Hosting and domain included",
+      "Hand-coded Static Website",
+      "Best for Small Businesses",
+      "Basic SEO Setup",
+      "Free Domain included",
+      "Fast - 95+ Lighthouse Score",
     ],
     button: {
       text: "Get Started",
-      link: "/",
+      link: "https://buy.stripe.com/7sI00Z7Yic18aD66oo",
     },
   },
   {
     name: "Growth",
-    price: "$249",
+    price: "$99",
     popular: true,
     features: [
-      "All Starter Features",
-      "Unlimited Rivisions",
+      "Advanced SEO Setup",
+      "Automated Lead Funnel",
       "CMS and Blog",
-      "Personalized design based on your brand",
-      "Up to 10 custom pages",
+      "Personalized design",
+      "Dynamic and Mobile-Friendly",
     ],
     button: {
       text: "Get Started",
-      link: "#",
+      link: "https://buy.stripe.com/6oEeVT2DYc186mQ289",
     },
   },
   {
-    name: "Startup",
-    price: "$499",
+    name: "E-Commerce",
+    price: "$199",
     popular: false,
     features: [
-      "Ecommerce Support",
-      "Unlimited Design Work",
+      "E-Commerce Support (Up to 100 Products)",
+      "Payment Module Integration",
       "Advanced Integrations",
-      "Dedicated Account Manager",
-      "Prority Support",
+      "Customer Reviews",
+      "Priority Support",
     ],
     button: {
-      text: "Contact us",
-      link: "/contact",
+      text: "Get Started",
+      link: "https://buy.stripe.com/dR6153diC9T026A3ce",
     },
   },
-  {
-    name: "Enterprise",
-    price: "$999",
-    popular: false,
-    features: [
-      "Ecommerce Support",
-      "Unlimited Design Work",
-      "Advanced Integrations",
-      "Dedicated Account Manager",
-      "Prority Support",
-    ],
-    button: {
-      text: "Contact us",
-      link: "/contact",
-    },
-  },
+  
 ];
 ---
 
@@ -77,7 +62,7 @@ const pricing = [
     <Sectionhead>
       <Fragment slot="title">Pricing</Fragment>
       <Fragment slot="desc">
-        Simple & Predictable pricing. No Surprises.
+        Simple & Predictable pricing, by the page. No Surprises.
       </Fragment>
     </Sectionhead>
 

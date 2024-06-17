@@ -9,21 +9,19 @@ import logo from "assets/logo.svg";
 
 
 const menuitems = [
-  {
-    title: "What We Do",
-    path: "#about",
-  },
-  {
-    title: "How It Works",
-    path: "#how",
-  },
+  
   {
     title: "Benefits",
-    path: "#benefits",
+    path: "#about",
   },
+  
   {
     title: "Pricing",
     path: "#pricing",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
   },
 ];
 ---
@@ -79,15 +77,15 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>See Plans</Link>
+          <Link href="https://billing.stripe.com/p/login/8wM5m8cqw3dI8TufYY" style="muted" block size="md">Log in</Link>
+          <Link href="#pricing" size="md" block>See Plans</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">See Plans</Link>
+        <a href="https://billing.stripe.com/p/login/8wM5m8cqw3dI8TufYY">Log in</a>
+        <Link href="#pricing" size="md">See Plans</Link>
       </div>
     </div>
   </header>
